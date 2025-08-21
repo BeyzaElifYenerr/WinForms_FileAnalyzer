@@ -1,0 +1,16 @@
+﻿info: WinFormsApp[0] @ 2025-08-21T15:54:47.3197776+03:00
+      Uygulama başlatıldı.
+info: WinFormsApp[0] @ 2025-08-21T15:54:53.3263883+03:00
+      Kullanıcı giriş yaptı, MainForm açılıyor.
+info: WinFormsApp[0] @ 2025-08-21T15:55:00.7483465+03:00
+      Dosya yükleme işlemi başladı.
+info: WinFormsApp[0] @ 2025-08-21T15:55:00.7802410+03:00
+      Dosya başarıyla yüklendi.
+info: WinFormsApp[0] @ 2025-08-21T15:55:12.4185007+03:00
+      Dosya yükleme işlemi başladı.
+info: WinFormsApp[0] @ 2025-08-21T15:55:13.1138506+03:00
+      Dosya başarıyla yüklendi.
+info: WinFormsApp[0] @ 2025-08-21T15:55:24.8623496+03:00
+      Dosya yükleme işlemi başladı.
+info: WinFormsApp[0] @ 2025-08-21T15:55:25.3585286+03:00
+      Dosya başarıyla yüklendi.
