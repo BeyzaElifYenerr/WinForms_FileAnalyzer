@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Data;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using WinForms_FileAnalyzer.Data;     // DbContext için
+using WinForms_FileAnalyzer.Models;   // User modeli için
 
 namespace WinForms_FileAnalyzer
 {
@@ -15,7 +15,6 @@ namespace WinForms_FileAnalyzer
 
         private void lblUsername_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -33,31 +32,37 @@ namespace WinForms_FileAnalyzer
                 lblStatus.Text = "Please fill in all fields.";
                 return;
             }
+
             if (password.Length < 4)
             {
                 lblStatus.Text = "Password must be at least 4 characters.";
                 return;
             }
+
             if (password != confirm)
             {
                 lblStatus.Text = "Passwords do not match.";
                 return;
             }
-            
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "users.txt");
-            if (!File.Exists(path)) File.WriteAllText(path, ""); 
 
-          
-            var exists = File.ReadAllLines(path)
-                             .Select(l => l.Split(':'))
-                             .Any(p => p.Length == 2 && p[0].Equals(username, StringComparison.OrdinalIgnoreCase));
-            if (exists)
+            using (var db = new AppDbContext())
             {
-                lblStatus.Text = "Username already exists.";
-                return;
-            }
+                bool exists = db.Users.Any(u => u.Username == username);
+                if (exists)
+                {
+                    lblStatus.Text = "Username already exists.";
+                    return;
+                }
 
-            File.AppendAllLines(path, new[] { $"{username}:{password}" });
+                var newUser = new User
+                {
+                    Username = username,
+                    Password = password
+                };
+
+                db.Users.Add(newUser);
+                db.SaveChanges();
+            }
 
             this.Tag = username;
             this.DialogResult = DialogResult.OK;
@@ -66,7 +71,6 @@ namespace WinForms_FileAnalyzer
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void chkShow_CheckedChanged(object sender, EventArgs e)

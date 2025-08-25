@@ -10,6 +10,8 @@ namespace WinForms_FileAnalyzer
         public static ILoggerFactory LoggerFactory { get; private set; }
         public static ILogger Logger { get; private set; }
 
+        
+
         [STAThread]
         static void Main()
         {

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.split = new System.Windows.Forms.SplitContainer();
+            this.lblSummary = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.dgvWords = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -38,7 +39,9 @@
             this.cboFileType = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.lblSummary = new System.Windows.Forms.Label();
+            this.btnExportJson = new System.Windows.Forms.Button();
+            this.btnExportJson.Click += new System.EventHandler(this.btnExportJson_Click);
+            this.btnExportJson.Click += new System.EventHandler(this.btnExportJson_Click);
             ((System.ComponentModel.ISupportInitialize)(this.split)).BeginInit();
             this.split.Panel1.SuspendLayout();
             this.split.Panel2.SuspendLayout();
@@ -64,25 +67,36 @@
             // 
             // split.Panel2
             // 
+            this.split.Panel2.Controls.Add(this.btnExportJson);
             this.split.Panel2.Controls.Add(this.statusStrip1);
             this.split.Panel2.Controls.Add(this.dgvPunct);
-            this.split.Size = new System.Drawing.Size(1571, 548);
-            this.split.SplitterDistance = 733;
+            this.split.Size = new System.Drawing.Size(1055, 491);
+            this.split.SplitterDistance = 492;
             this.split.TabIndex = 1;
+            // 
+            // lblSummary
+            // 
+            this.lblSummary.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSummary.Location = new System.Drawing.Point(0, 0);
+            this.lblSummary.Name = "lblSummary";
+            this.lblSummary.Size = new System.Drawing.Size(492, 40);
+            this.lblSummary.TabIndex = 2;
+            this.lblSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressBar
             // 
             this.progressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar.Location = new System.Drawing.Point(0, 525);
+            this.progressBar.Location = new System.Drawing.Point(0, 468);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(733, 23);
+            this.progressBar.Size = new System.Drawing.Size(492, 23);
             this.progressBar.TabIndex = 1;
             // 
             // dgvWords
             // 
             this.dgvWords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvWords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWords.Location = new System.Drawing.Point(357, 148);
+            this.dgvWords.Location = new System.Drawing.Point(146, 148);
             this.dgvWords.Name = "dgvWords";
             this.dgvWords.Size = new System.Drawing.Size(240, 150);
             this.dgvWords.TabIndex = 0;
@@ -91,9 +105,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 526);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 469);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(834, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(559, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -149,31 +163,29 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1571, 107);
+            this.topPanel.Size = new System.Drawing.Size(1055, 107);
             this.topPanel.TabIndex = 0;
-            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
-            // lblSummary
+            // btnExportJson
             // 
-            this.lblSummary.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSummary.AutoSize = true;
-            this.lblSummary.Location = new System.Drawing.Point(679, 91);
-            this.lblSummary.Name = "lblSummary";
-            this.lblSummary.Size = new System.Drawing.Size(0, 13);
-            this.lblSummary.TabIndex = 2;
+            this.btnExportJson.Location = new System.Drawing.Point(448, 432);
+            this.btnExportJson.Name = "btnExportJson";
+            this.btnExportJson.Size = new System.Drawing.Size(99, 23);
+            this.btnExportJson.TabIndex = 2;
+            this.btnExportJson.Text = "Verileri Dışa Aktar";
+            this.btnExportJson.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1571, 655);
+            this.ClientSize = new System.Drawing.Size(1055, 598);
             this.Controls.Add(this.split);
             this.Controls.Add(this.topPanel);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "File Analysis";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.split.Panel1.ResumeLayout(false);
-            this.split.Panel1.PerformLayout();
             this.split.Panel2.ResumeLayout(false);
             this.split.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split)).EndInit();
@@ -200,6 +212,7 @@
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label lblSummary;
+        private System.Windows.Forms.Button btnExportJson;
     }
 }
 

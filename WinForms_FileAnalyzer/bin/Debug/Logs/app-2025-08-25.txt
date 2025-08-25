@@ -1,0 +1,297 @@
+﻿info: WinFormsApp[0] @ 2025-08-25T10:51:32.3703458+03:00
+      Uygulama başlatıldı.
+info: WinFormsApp[0] @ 2025-08-25T10:51:38.0526063+03:00
+      Kullanıcı giriş yaptı, MainForm açılıyor.
+info: WinFormsApp[0] @ 2025-08-25T10:56:41.4121233+03:00
+      Uygulama başlatıldı.
+info: WinFormsApp[0] @ 2025-08-25T10:56:47.5509725+03:00
+      Kullanıcı giriş yaptı, MainForm açılıyor.
+info: WinFormsApp[0] @ 2025-08-25T10:56:59.6402724+03:00
+      Dosya yükleme işlemi başladı.
+info: WinFormsApp[0] @ 2025-08-25T10:56:59.6560372+03:00
+      Dosya başarıyla yüklendi.
+info: WinFormsApp[0] @ 2025-08-25T11:08:30.2115038+03:00
+      Uygulama başlatıldı.
+info: WinFormsApp[0] @ 2025-08-25T11:08:36.5176902+03:00
+      Kullanıcı giriş yaptı, MainForm açılıyor.
+info: WinFormsApp[0] @ 2025-08-25T11:08:42.7150269+03:00
+      Dosya yükleme işlemi başladı.
+info: WinFormsApp[0] @ 2025-08-25T11:08:42.7306626+03:00
+      Dosya başarıyla yüklendi.
+info: WinFormsApp[0] @ 2025-08-25T22:26:11.4004330+03:00
+      Uygulama başlatıldı.
+info: WinFormsApp[0] @ 2025-08-25T22:26:36.4768057+03:00
+      Uygulama başlatıldı.
+crit: WinFormsApp[0] @ 2025-08-25T22:26:59.7599571+03:00
+      Uygulama kritik bir hatayla sonlandı!
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   konum: Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnection.cs içinde: satır 820
+   konum: Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 1572
+   konum: Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, Boolean isFirstTransparentAttempt, SqlAuthenticationMethod authType, String certificate, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, Boolean useOriginalAddressInfo, Boolean disableTnir, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 559
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover, Boolean isFirstTransparentAttempt, Boolean disableTnir) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 2215
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1818
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1628
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, DbConnectionPool pool, String accessToken, SqlClientOriginalNetworkAddressInfo originalNetworkAddressInfo, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 476
+   konum: Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnectionFactory.cs içinde: satır 143
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 167
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 955
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 2024
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1427
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1310
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 357
+   konum: Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionInternal.cs içinde: satır 773
+   konum: Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionClosed.cs içinde: satır 72
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1860
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1853
+   konum: Microsoft.Data.SqlClient.SqlConnection.Open() H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1421
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   konum: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   konum: System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   konum: lambda_method(Closure , QueryContext )
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   konum: System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   konum: WinForms_FileAnalyzer.LoginForm.btnLogin_Click(Object sender, EventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\LoginForm.cs içinde: satır 41
+   konum: System.Windows.Forms.Control.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   konum: System.Windows.Forms.Button.WndProc(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.Program.Main() C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\Program.cs içinde: satır 56
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+info: WinFormsApp[0] @ 2025-08-25T22:27:07.7904583+03:00
+      Uygulama başlatıldı.
+crit: WinFormsApp[0] @ 2025-08-25T22:27:35.2658965+03:00
+      Uygulama kritik bir hatayla sonlandı!
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   konum: Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnection.cs içinde: satır 820
+   konum: Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 1572
+   konum: Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, Boolean isFirstTransparentAttempt, SqlAuthenticationMethod authType, String certificate, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, Boolean useOriginalAddressInfo, Boolean disableTnir, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 559
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover, Boolean isFirstTransparentAttempt, Boolean disableTnir) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 2215
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1818
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1628
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, DbConnectionPool pool, String accessToken, SqlClientOriginalNetworkAddressInfo originalNetworkAddressInfo, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 476
+   konum: Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnectionFactory.cs içinde: satır 143
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 167
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 955
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 2024
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1427
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1310
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 357
+   konum: Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionInternal.cs içinde: satır 773
+   konum: Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionClosed.cs içinde: satır 72
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1860
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1853
+   konum: Microsoft.Data.SqlClient.SqlConnection.Open() H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1421
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   konum: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   konum: System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   konum: lambda_method(Closure , QueryContext )
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   konum: System.Linq.Queryable.Any[TSource](IQueryable`1 source, Expression`1 predicate)
+   konum: WinForms_FileAnalyzer.RegisterForm.btnRegister_Click(Object sender, EventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\RegisterForm.cs içinde: satır 50
+   konum: System.Windows.Forms.Control.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   konum: System.Windows.Forms.Button.WndProc(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.LoginForm.lnkCreate_LinkClicked(Object sender, LinkLabelLinkClickedEventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\LoginForm.cs içinde: satır 69
+   konum: System.Windows.Forms.LinkLabel.OnLinkClicked(LinkLabelLinkClickedEventArgs e)
+   konum: System.Windows.Forms.LinkLabel.OnMouseUp(MouseEventArgs e)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.Label.WndProc(Message& m)
+   konum: System.Windows.Forms.LinkLabel.WndProc(Message& msg)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.Program.Main() C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\Program.cs içinde: satır 56
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+info: WinFormsApp[0] @ 2025-08-25T22:31:20.4020401+03:00
+      Uygulama başlatıldı.
+crit: WinFormsApp[0] @ 2025-08-25T22:31:48.4317589+03:00
+      Uygulama kritik bir hatayla sonlandı!
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   konum: Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnection.cs içinde: satır 820
+   konum: Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 1572
+   konum: Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, Boolean isFirstTransparentAttempt, SqlAuthenticationMethod authType, String certificate, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, Boolean useOriginalAddressInfo, Boolean disableTnir, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 559
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover, Boolean isFirstTransparentAttempt, Boolean disableTnir) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 2215
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1818
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1628
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, DbConnectionPool pool, String accessToken, SqlClientOriginalNetworkAddressInfo originalNetworkAddressInfo, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 476
+   konum: Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnectionFactory.cs içinde: satır 143
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 167
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 955
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 2024
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1427
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1310
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 357
+   konum: Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionInternal.cs içinde: satır 773
+   konum: Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionClosed.cs içinde: satır 72
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1860
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1853
+   konum: Microsoft.Data.SqlClient.SqlConnection.Open() H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1421
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   konum: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   konum: System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   konum: lambda_method(Closure , QueryContext )
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   konum: System.Linq.Queryable.Any[TSource](IQueryable`1 source, Expression`1 predicate)
+   konum: WinForms_FileAnalyzer.RegisterForm.btnRegister_Click(Object sender, EventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\RegisterForm.cs içinde: satır 50
+   konum: System.Windows.Forms.Control.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   konum: System.Windows.Forms.Button.WndProc(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.LoginForm.lnkCreate_LinkClicked(Object sender, LinkLabelLinkClickedEventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\LoginForm.cs içinde: satır 69
+   konum: System.Windows.Forms.LinkLabel.OnLinkClicked(LinkLabelLinkClickedEventArgs e)
+   konum: System.Windows.Forms.LinkLabel.OnMouseUp(MouseEventArgs e)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.Label.WndProc(Message& m)
+   konum: System.Windows.Forms.LinkLabel.WndProc(Message& msg)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.Program.Main() C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\Program.cs içinde: satır 56
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+info: WinFormsApp[0] @ 2025-08-25T22:40:02.0250674+03:00
+      Uygulama başlatıldı.
+crit: WinFormsApp[0] @ 2025-08-25T22:40:11.8141886+03:00
+      Uygulama kritik bir hatayla sonlandı!
+System.InvalidOperationException: Instance failure.
+   konum: Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, Boolean isFirstTransparentAttempt, SqlAuthenticationMethod authType, String certificate, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, Boolean useOriginalAddressInfo, Boolean disableTnir, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\TdsParser.cs içinde: satır 644
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover, Boolean isFirstTransparentAttempt, Boolean disableTnir) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 2215
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1757
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 1628
+   konum: Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, DbConnectionPool pool, String accessToken, SqlClientOriginalNetworkAddressInfo originalNetworkAddressInfo, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlInternalConnectionTds.cs içinde: satır 465
+   konum: Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnectionFactory.cs içinde: satır 143
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 167
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 955
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 2024
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1427
+   konum: Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionPool.cs içinde: satır 1310
+   konum: Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionFactory.cs içinde: satır 357
+   konum: Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionInternal.cs içinde: satır 773
+   konum: Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\ProviderBase\DbConnectionClosed.cs içinde: satır 72
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1860
+   konum: Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry) H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1853
+   konum: Microsoft.Data.SqlClient.SqlConnection.Open() H:\tsaagent4\_work\2\s\src\Microsoft.Data.SqlClient\netfx\src\Microsoft\Data\SqlClient\SqlConnection.cs içinde: satır 1421
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   konum: Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   konum: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   konum: System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   konum: lambda_method(Closure , QueryContext )
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   konum: Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   konum: System.Linq.Queryable.Any[TSource](IQueryable`1 source, Expression`1 predicate)
+   konum: WinForms_FileAnalyzer.RegisterForm.btnRegister_Click(Object sender, EventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\RegisterForm.cs içinde: satır 50
+   konum: System.Windows.Forms.Control.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnClick(EventArgs e)
+   konum: System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   konum: System.Windows.Forms.Button.WndProc(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.LoginForm.lnkCreate_LinkClicked(Object sender, LinkLabelLinkClickedEventArgs e) C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\LoginForm.cs içinde: satır 69
+   konum: System.Windows.Forms.LinkLabel.OnLinkClicked(LinkLabelLinkClickedEventArgs e)
+   konum: System.Windows.Forms.LinkLabel.OnMouseUp(MouseEventArgs e)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: System.Windows.Forms.Label.WndProc(Message& m)
+   konum: System.Windows.Forms.LinkLabel.WndProc(Message& msg)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: WinForms_FileAnalyzer.Program.Main() C:\Users\beyzy\source\repos\WinForms_FileAnalyzer\WinForms_FileAnalyzer\Program.cs içinde: satır 56
+info: WinFormsApp[0] @ 2025-08-25T23:11:54.0436504+03:00
+      Uygulama başlatıldı.
+info: WinFormsApp[0] @ 2025-08-25T23:12:08.4998654+03:00
+      Kullanıcı giriş yaptı, MainForm açılıyor.

@@ -1,7 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using WinForms_FileAnalyzer.Data;     // DbContext için
+using WinForms_FileAnalyzer.Models;   // User modeli için
 
 namespace WinForms_FileAnalyzer
 {
@@ -10,11 +11,6 @@ namespace WinForms_FileAnalyzer
         public LoginForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -31,46 +27,39 @@ namespace WinForms_FileAnalyzer
         {
             lblStatus.Text = "";
 
-            var user = txtUserName.Text.Trim();
-            var pass = txtPassword.Text;
+            var username = txtUserName.Text.Trim();
+            var password = txtPassword.Text;
 
-            if (string.IsNullOrWhiteSpace(user) || string.IsNullOrWhiteSpace(pass))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 lblStatus.Text = "Fill in all fields.";
                 return;
             }
 
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "users.txt");
-            if (!File.Exists(path))
+            using (var db = new AppDbContext())
             {
-                lblStatus.Text = "No users found. Please create an account.";
-                return;
+                var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+                if (user != null)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    lblStatus.Text = "Invalid username or password.";
+                }
             }
-
-            bool ok = File.ReadAllLines(path)
-                          .Any(l => l.Trim().Equals($"{user}:{pass}", StringComparison.Ordinal));
-            if (ok)
-            {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else
-            {
-                lblStatus.Text = "Invalid username or password.";
-            }
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
-
         }
 
         private void lblStatus_Click(object sender, EventArgs e)
         {
-
+            // boş
         }
 
         private void lnkCreate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -79,10 +68,10 @@ namespace WinForms_FileAnalyzer
             {
                 if (reg.ShowDialog() == DialogResult.OK)
                 {
-                    var newUser = reg.Tag as string;   
+                    var newUser = reg.Tag as string;
                     if (!string.IsNullOrEmpty(newUser))
                     {
-                        txtUserName.Text = newUser;    
+                        txtUserName.Text = newUser;
                         txtPassword.Focus();
                     }
                 }
